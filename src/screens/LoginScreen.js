@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from "../assets/icons/Logo.svg"
 import { Input } from "../components/Input/Input"
 
 import styles from "./LoginScreen.module.css"
+import { Button } from "../components/Button/Button"
 
 export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
     return (
@@ -41,11 +42,13 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
                         onChange={handleChange}
                         placeholder={"********"}
                     />
-                    <div className={styles.buttons}>
-                        <button>Login</button>
-                        <button>Register</button>
+                    <div className={styles.formButtonContainer}>
+                        <Button type={"login"}>Login</Button>
                     </div>
                 </form>
+                <div className={styles.buttonContainer}>
+                    <Button type={"register"}>Register</Button>
+                </div>
             </div>
         </>
     )
