@@ -11,16 +11,20 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
             <img src={picture} className={styles.image} />
             <div className={styles.loginContainer}>
                 <div className={styles.topInfoContainer}>
-                    <Logo
-                        style={{
-                            width: 120,
-                            height: 78,
-                        }}
-                    />
-                    <p>Welcome back!</p>
-                    <p>Login to your account</p>
+                    <div className={styles.logo}>
+                        <Logo
+                            style={{
+                                width: 120,
+                                height: 78,
+                            }}
+                        />
+                    </div>
+                    <div className={styles.topTexts}>
+                        <p className={styles.text2}>Welcome back!</p>
+                        <p className={styles.text1}>Login to your account</p>
+                    </div>
                 </div>
-                <form className={styles.topInfoContainer} onSubmit={onSubmit}>
+                <form className={styles.formContainer} onSubmit={onSubmit}>
                     <Input
                         label={"E-mail"}
                         type={"email"}
@@ -37,7 +41,7 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
                         onChange={handleChange}
                         placeholder={"********"}
                     />
-                    <div className="buttons">
+                    <div className={styles.buttons}>
                         <button>Login</button>
                         <button>Register</button>
                     </div>

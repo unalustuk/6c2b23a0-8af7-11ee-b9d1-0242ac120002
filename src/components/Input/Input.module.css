@@ -16,6 +16,7 @@
     padding-right: 16px;
     margin-top: 10px;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .label {
