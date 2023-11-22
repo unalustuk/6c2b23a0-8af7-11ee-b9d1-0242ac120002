@@ -1,16 +1,16 @@
 import React from "react"
-import { ReactComponent as Picture } from "../assets/images/loginscreen-picture.svg"
+import picture from "../assets/images/Picture.png"
 import { ReactComponent as Logo } from "../assets/icons/Logo.svg"
 import { Input } from "../components/Input/Input"
+
+import styles from "./LoginScreen.module.css"
 
 export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
     return (
         <>
-            <div className="image-container">
-                <Picture />
-            </div>
-            <div className="Login">
-                <div className="top">
+            <img src={picture} className={styles.image} />
+            <div className={styles.loginContainer}>
+                <div className={styles.topInfoContainer}>
                     <Logo
                         style={{
                             width: 120,
@@ -20,25 +20,23 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
                     <p>Welcome back!</p>
                     <p>Login to your account</p>
                 </div>
-                <form onSubmit={onSubmit}>
-                    <div className="bottom">
-                        <Input
-                            label={"E-mail"}
-                            type={"email"}
-                            name={"email"}
-                            value={logInfo.email}
-                            onChange={handleChange}
-                            placeholder={"john@mail.com"}
-                        />
-                        <Input
-                            label={"Password"}
-                            type={"password"}
-                            name={"password"}
-                            value={logInfo.password}
-                            onChange={handleChange}
-                            placeholder={"********"}
-                        />
-                    </div>
+                <form className={styles.topInfoContainer} onSubmit={onSubmit}>
+                    <Input
+                        label={"E-mail"}
+                        type={"email"}
+                        name={"email"}
+                        value={logInfo.email}
+                        onChange={handleChange}
+                        placeholder={"john@mail.com"}
+                    />
+                    <Input
+                        label={"Password"}
+                        type={"password"}
+                        name={"password"}
+                        value={logInfo.password}
+                        onChange={handleChange}
+                        placeholder={"********"}
+                    />
                     <div className="buttons">
                         <button>Login</button>
                         <button>Register</button>
