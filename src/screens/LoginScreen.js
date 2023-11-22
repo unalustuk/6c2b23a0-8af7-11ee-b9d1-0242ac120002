@@ -1,5 +1,8 @@
 import React from "react"
 import { ReactComponent as Picture } from "../assets/images/loginscreen-picture.svg"
+import { ReactComponent as Logo } from "../assets/icons/Logo.svg"
+import { Input } from "../components/Input/Input"
+
 export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
     return (
         <>
@@ -8,29 +11,33 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
             </div>
             <div className="Login">
                 <div className="top">
+                    <Logo
+                        style={{
+                            width: 120,
+                            height: 78,
+                        }}
+                    />
                     <p>Welcome back!</p>
                     <p>Login to your account</p>
                 </div>
                 <form onSubmit={onSubmit}>
                     <div className="bottom">
-                        <div>
-                            <label>E-mail</label>
-                            <input
-                                type={"email"}
-                                name={"email"}
-                                value={logInfo.email}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input
-                                type={"password"}
-                                name={"password"}
-                                value={logInfo.password}
-                                onChange={handleChange}
-                            />
-                        </div>
+                        <Input
+                            label={"E-mail"}
+                            type={"email"}
+                            name={"email"}
+                            value={logInfo.email}
+                            onChange={handleChange}
+                            placeholder={"john@mail.com"}
+                        />
+                        <Input
+                            label={"Password"}
+                            type={"password"}
+                            name={"password"}
+                            value={logInfo.password}
+                            onChange={handleChange}
+                            placeholder={"********"}
+                        />
                     </div>
                     <div className="buttons">
                         <button>Login</button>
