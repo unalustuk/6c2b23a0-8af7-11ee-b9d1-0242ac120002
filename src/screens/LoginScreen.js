@@ -1,9 +1,11 @@
 import React from "react"
-
+import { ReactComponent as Picture } from "../assets/images/loginscreen-picture.svg"
 export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
     return (
         <>
-            <div className="Image">image</div>
+            <div className="image-container">
+                <Picture />
+            </div>
             <div className="Login">
                 <div className="top">
                     <p>Welcome back!</p>

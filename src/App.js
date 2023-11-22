@@ -1,5 +1,5 @@
 import "./App.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import axios from "axios"
 import { LoginScreen } from "./screens/LoginScreen"
 
@@ -18,8 +18,11 @@ function App() {
         )
 
         setResponse(res)
-        console.log(response?.data)
     }
+
+    useEffect(() => {
+        console.log(response)
+    }, [response])
 
     const handleChange = (e) => {
         const { name, value } = e.target
