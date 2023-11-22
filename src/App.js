@@ -1,9 +1,10 @@
 import "./App.css"
 import { useState } from "react"
 import axios from "axios"
+import { LoginScreen } from "./screens/LoginScreen"
 
 function App() {
-    const [form, setForm] = useState({
+    const [logInfo, setLogInfo] = useState({
         email: "",
         password: "",
     })
@@ -13,7 +14,7 @@ function App() {
         e.preventDefault()
         const res = await axios.post(
             "https://assign-api.piton.com.tr/api/rest/login",
-            form
+            logInfo
         )
 
         setResponse(res)
@@ -22,49 +23,20 @@ function App() {
 
     const handleChange = (e) => {
         const { name, value } = e.target
-        setForm((state) => {
+        setLogInfo((state) => {
             return {
                 ...state,
                 [name]: value,
             }
         })
     }
-    console.log(form)
     return (
         <div className="App">
-            <div className="Image">image</div>
-            <div className="Login">
-                <div className="top">
-                    <p>Welcome back!</p>
-                    <p>Login to your account</p>
-                </div>
-                <form onSubmit={onSubmitHandler}>
-                    <div className="bottom">
-                        <div>
-                            <label>E-mail</label>
-                            <input
-                                type={"email"}
-                                name={"email"}
-                                value={form.email}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input
-                                type={"password"}
-                                name={"password"}
-                                value={form.password}
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="buttons">
-                        <button>Login</button>
-                        <button>Register</button>
-                    </div>
-                </form>
-            </div>
+            <LoginScreen
+                handleChange={handleChange}
+                logInfo={logInfo}
+                onSubmit={onSubmitHandler}
+            />
         </div>
     )
 }
