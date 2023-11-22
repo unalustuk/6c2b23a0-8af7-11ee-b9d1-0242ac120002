@@ -12,25 +12,24 @@
 }
 
 .topInfoContainer {
+    margin-top: 80px;
+
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
     width: 400px;
     align-items: flex-start;
-    margin-bottom: 80px;
 }
 
 .logo {
     align-self: center;
-    margin-top: 80px;
+    margin-bottom: 111px;
 }
 
 .topTexts {
     display: flex;
     flex-direction: column;
-    margin-top: 111px;
 }
 
 .text2 {
@@ -54,6 +53,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 80px;
 }
 
 .formButtonContainer {
@@ -63,6 +63,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 150px;
 }
 
 .buttonContainer {
@@ -73,4 +74,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
