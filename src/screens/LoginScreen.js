@@ -6,7 +6,7 @@ import { Input } from "../components/Input/Input"
 import styles from "./LoginScreen.module.css"
 import { Button } from "../components/Button/Button"
 
-export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
+export const LoginScreen = ({ handleChange, logInfo, onSubmit, errors }) => {
     return (
         <>
             <div className={styles.filter}></div>
@@ -33,6 +33,7 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
                         value={logInfo.email}
                         onChange={handleChange}
                         placeholder={"john@mail.com"}
+                        error={errors?.email}
                     />
                     <Input
                         label={"Password"}
@@ -41,6 +42,7 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
                         value={logInfo.password}
                         onChange={handleChange}
                         placeholder={"••••••••"}
+                        error={errors?.password}
                     />
                     <div className={styles.formButtonContainer}>
                         <Button type={"login"}>Login</Button>
