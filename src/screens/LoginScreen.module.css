@@ -156,3 +156,19 @@
         margin-bottom: 40px;
     }
 }
+
+@media (max-height: 1023px) {
+    .inputContainer {
+        margin-top: 20px;
+    }
+    .logo {
+        margin-bottom: 50px;
+    }
+
+    .formContainer {
+        margin-top: 40px;
+    }
+    .formButtonContainer {
+        margin-top: 75px;
+    }
+}

@@ -10,7 +10,6 @@ export const Input = ({
     onChange,
     error,
 }) => {
-    console.log(label, error)
     return (
         <div className={styles.inputContainer}>
             <label className={styles.label}>{label}</label>
