@@ -22,3 +22,13 @@
     font-family: "Manrope", sans-serif;
     font-weight: 600;
 }
+
+.loginButton:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.registerButton:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}

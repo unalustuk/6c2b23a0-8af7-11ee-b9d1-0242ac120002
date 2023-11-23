@@ -40,7 +40,7 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
                         name={"password"}
                         value={logInfo.password}
                         onChange={handleChange}
-                        placeholder={"********"}
+                        placeholder={"••••••••"}
                     />
                     <div className={styles.formButtonContainer}>
                         <Button type={"login"}>Login</Button>
