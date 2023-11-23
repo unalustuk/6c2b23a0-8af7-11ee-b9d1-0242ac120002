@@ -83,3 +83,76 @@
     justify-content: center;
     margin-bottom: 40px;
 }
+
+@media (max-width: 576px) {
+    .container {
+        width: 350px;
+    }
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .formButtonContainer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 75px;
+    }
+}
+
+@media (max-width: 800px) {
+    .filter {
+        display: none;
+    }
+    .loginContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .topInfoContainer {
+        margin-top: 80px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .logo {
+        align-self: center;
+        margin-bottom: 50px;
+    }
+
+    .formContainer {
+        width: auto;
+        margin-top: 40px;
+    }
+
+    .formButtonContainer {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 75px;
+    }
+    .buttonContainer {
+        width: 100%;
+
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+}

@@ -11,45 +11,49 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit, errors }) => {
         <>
             <div className={styles.filter}></div>
             <div className={styles.loginContainer}>
-                <div className={styles.topInfoContainer}>
-                    <div className={styles.logo}>
-                        <Logo
-                            style={{
-                                width: 120,
-                                height: 78,
-                            }}
+                <div className={styles.container}>
+                    <div className={styles.topInfoContainer}>
+                        <div className={styles.logo}>
+                            <Logo
+                                style={{
+                                    width: 120,
+                                    height: 78,
+                                }}
+                            />
+                        </div>
+                        <div className={styles.topTexts}>
+                            <p className={styles.text2}>Welcome back!</p>
+                            <p className={styles.text1}>
+                                Login to your account
+                            </p>
+                        </div>
+                    </div>
+                    <form className={styles.formContainer} onSubmit={onSubmit}>
+                        <Input
+                            label={"E-mail"}
+                            type={"email"}
+                            name={"email"}
+                            value={logInfo.email}
+                            onChange={handleChange}
+                            placeholder={"john@mail.com"}
+                            error={errors?.email}
                         />
+                        <Input
+                            label={"Password"}
+                            type={"password"}
+                            name={"password"}
+                            value={logInfo.password}
+                            onChange={handleChange}
+                            placeholder={"••••••••"}
+                            error={errors?.password}
+                        />
+                        <div className={styles.formButtonContainer}>
+                            <Button type={"login"}>Login</Button>
+                        </div>
+                    </form>
+                    <div className={styles.buttonContainer}>
+                        <Button type={"register"}>Register</Button>
                     </div>
-                    <div className={styles.topTexts}>
-                        <p className={styles.text2}>Welcome back!</p>
-                        <p className={styles.text1}>Login to your account</p>
-                    </div>
-                </div>
-                <form className={styles.formContainer} onSubmit={onSubmit}>
-                    <Input
-                        label={"E-mail"}
-                        type={"email"}
-                        name={"email"}
-                        value={logInfo.email}
-                        onChange={handleChange}
-                        placeholder={"john@mail.com"}
-                        error={errors?.email}
-                    />
-                    <Input
-                        label={"Password"}
-                        type={"password"}
-                        name={"password"}
-                        value={logInfo.password}
-                        onChange={handleChange}
-                        placeholder={"••••••••"}
-                        error={errors?.password}
-                    />
-                    <div className={styles.formButtonContainer}>
-                        <Button type={"login"}>Login</Button>
-                    </div>
-                </form>
-                <div className={styles.buttonContainer}>
-                    <Button type={"register"}>Register</Button>
                 </div>
             </div>
         </>
