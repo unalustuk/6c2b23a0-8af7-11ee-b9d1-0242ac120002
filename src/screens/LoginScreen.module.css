@@ -158,9 +158,6 @@
 }
 
 @media (max-height: 1023px) {
-    .inputContainer {
-        margin-top: 20px;
-    }
     .logo {
         margin-bottom: 50px;
     }
@@ -170,5 +167,18 @@
     }
     .formButtonContainer {
         margin-top: 75px;
+    }
+}
+
+@media (max-height: 600px) {
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .formContainer {
+        margin-top: 20px;
+    }
+    .formButtonContainer {
+        margin-top: 36px;
     }
 }

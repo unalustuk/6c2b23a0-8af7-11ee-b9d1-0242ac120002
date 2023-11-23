@@ -47,6 +47,7 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit, errors }) => {
                             placeholder={"••••••••"}
                             error={errors?.password}
                         />
+                        <Input type={"checkbox"} />
                         <div className={styles.formButtonContainer}>
                             <Button type={"login"}>Login</Button>
                         </div>
