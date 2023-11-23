@@ -9,7 +9,7 @@ import { Button } from "../components/Button/Button"
 export const LoginScreen = ({ handleChange, logInfo, onSubmit }) => {
     return (
         <>
-            <img src={picture} className={styles.image} />
+            <div className={styles.filter}></div>
             <div className={styles.loginContainer}>
                 <div className={styles.topInfoContainer}>
                     <div className={styles.logo}>

@@ -1,8 +1,15 @@
-.image {
+.filter {
     width: 50vw;
     height: 100vh;
+    background: linear-gradient(
+            0deg,
+            rgba(29, 29, 78, 0.2) 0%,
+            rgba(29, 29, 78, 0.2) 100%
+        ),
+        url("../assets/images/Picture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .loginContainer {
     display: flex;
     flex-direction: column;
