@@ -6,7 +6,13 @@ import { Input } from "../components/Input/Input"
 import styles from "./LoginScreen.module.css"
 import { Button } from "../components/Button/Button"
 
-export const LoginScreen = ({ handleChange, logInfo, onSubmit, errors }) => {
+export const LoginScreen = ({
+    handleChange,
+    logInfo,
+    onSubmit,
+    errors,
+    isChecked,
+}) => {
     return (
         <>
             <div className={styles.filter}></div>
@@ -47,7 +53,12 @@ export const LoginScreen = ({ handleChange, logInfo, onSubmit, errors }) => {
                             placeholder={"••••••••"}
                             error={errors?.password}
                         />
-                        <Input type={"checkbox"} />
+                        <Input
+                            name={"checkbox"}
+                            onChange={handleChange}
+                            type={"checkbox"}
+                            value={isChecked.checkbox}
+                        />
                         <div className={styles.formButtonContainer}>
                             <Button type={"login"}>Login</Button>
                         </div>

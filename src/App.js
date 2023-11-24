@@ -12,6 +12,7 @@ function App() {
         email: "",
         password: "",
     })
+    const [isChecked, setIsChecked] = useState(false)
     const [errors, setErrors] = useState({})
     const [response, setResponse] = useState(null)
 
@@ -46,13 +47,19 @@ function App() {
 
     const handleChange = (e) => {
         const { name, value } = e.target
-        setLogInfo((state) => {
-            return {
-                ...state,
-                [name]: value,
-            }
-        })
+        if (name === "checkbox") {
+            setIsChecked(!isChecked)
+        } else {
+            setLogInfo((state) => {
+                return {
+                    ...state,
+                    [name]: value,
+                }
+            })
+        }
     }
+    console.log(isChecked)
+    console.log(logInfo)
     return (
         <div className="App">
             <LoginScreen
@@ -60,6 +67,7 @@ function App() {
                 logInfo={logInfo}
                 onSubmit={onSubmitHandler}
                 errors={errors}
+                isChecked={isChecked}
             />
         </div>
     )

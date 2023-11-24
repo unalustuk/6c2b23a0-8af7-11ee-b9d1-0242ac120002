@@ -23,8 +23,13 @@ export const Input = ({
             >
                 <label className={styles.container}>
                     Remember Me
-                    <input type="checkbox" />
-                    <span class={styles.checkmark}></span>
+                    <input
+                        type="checkbox"
+                        name={name}
+                        onChange={onChange}
+                        checked={value}
+                    />
+                    <span className={styles.checkmark}></span>
                 </label>
                 {/* <input
                     id="remember"
