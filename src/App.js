@@ -37,6 +37,12 @@ function App() {
                 logInfo
             )
 
+            if (isChecked && res.data.action_login.token) {
+                localStorage.setItem(
+                    "token",
+                    JSON.stringify(res.data.action_login.token)
+                )
+            }
             setResponse(res)
         }
     }
@@ -58,8 +64,7 @@ function App() {
             })
         }
     }
-    console.log(isChecked)
-    console.log(logInfo)
+
     return (
         <div className="App">
             <LoginScreen
