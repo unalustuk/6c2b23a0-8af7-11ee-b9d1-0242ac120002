@@ -21,7 +21,12 @@ export const Input = ({
                     height: 24,
                 }}
             >
-                <input
+                <label className={styles.container}>
+                    Remember Me
+                    <input type="checkbox" />
+                    <span class={styles.checkmark}></span>
+                </label>
+                {/* <input
                     id="remember"
                     type="checkbox"
                     style={{
@@ -31,7 +36,7 @@ export const Input = ({
                         width: 0,
                     }}
                 />
-                <span style={{}}></span>
+                <span style={{""}}></span>
                 <label
                     htmlFor="remember"
                     className={styles.label}
@@ -43,7 +48,7 @@ export const Input = ({
                     }}
                 >
                     Remember me
-                </label>
+                </label> */}
             </div>
         )
     }
