@@ -1,3 +1,8 @@
+![Screenshot_5](https://github.com/unalustuk/6c2b23a0-8af7-11ee-b9d1-0242ac120002/assets/66714088/f34d2051-3e52-402f-a72b-2672be6853a4)
+
+![Screenshot_11](https://github.com/unalustuk/6c2b23a0-8af7-11ee-b9d1-0242ac120002/assets/66714088/2fdd5b68-2a7e-4673-833f-164902a5c97d)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
