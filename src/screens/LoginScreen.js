@@ -35,24 +35,29 @@ export const LoginScreen = ({
                         </div>
                     </div>
                     <form className={styles.formContainer} onSubmit={onSubmit}>
-                        <Input
-                            label={"E-mail"}
-                            type={"email"}
-                            name={"email"}
-                            value={logInfo.email}
-                            onChange={handleChange}
-                            placeholder={"john@mail.com"}
-                            error={errors?.email}
-                        />
-                        <Input
-                            label={"Password"}
-                            type={"password"}
-                            name={"password"}
-                            value={logInfo.password}
-                            onChange={handleChange}
-                            placeholder={"••••••••"}
-                            error={errors?.password}
-                        />
+                        <div style={{ width: "100%" }}>
+                            <Input
+                                label={"E-mail"}
+                                type={"email"}
+                                name={"email"}
+                                value={logInfo.email}
+                                onChange={handleChange}
+                                placeholder={"john@mail.com"}
+                                error={errors?.email}
+                            />
+                        </div>
+                        <div style={{ width: "100%", marginTop: 40 }}>
+                            <Input
+                                label={"Password"}
+                                type={"password"}
+                                name={"password"}
+                                value={logInfo.password}
+                                onChange={handleChange}
+                                placeholder={"••••••••"}
+                                error={errors?.password}
+                            />
+                        </div>
+
                         <Input
                             name={"checkbox"}
                             onChange={handleChange}

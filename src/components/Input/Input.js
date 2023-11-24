@@ -9,6 +9,7 @@ export const Input = ({
     placeholder,
     onChange,
     error,
+    style,
 }) => {
     if (type === "checkbox") {
         return (
@@ -31,29 +32,6 @@ export const Input = ({
                     />
                     <span className={styles.checkmark}></span>
                 </label>
-                {/* <input
-                    id="remember"
-                    type="checkbox"
-                    style={{
-                        opacity: 0,
-                        cursor: "pointer",
-                        height: 0,
-                        width: 0,
-                    }}
-                />
-                <span style={{""}}></span>
-                <label
-                    htmlFor="remember"
-                    className={styles.label}
-                    style={{
-                        color: "#6251DD",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        marginLeft: 4,
-                    }}
-                >
-                    Remember me
-                </label> */}
             </div>
         )
     }
@@ -68,6 +46,7 @@ export const Input = ({
                 onChange={onChange}
                 placeholder={placeholder}
                 className={error ? styles.error : styles.input}
+                style={{ style }}
             />
         </div>
     )
